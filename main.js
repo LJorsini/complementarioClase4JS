@@ -31,12 +31,11 @@ function calcularDistancia(planeta1, planeta2) {
     }
     return distancia;
 }
-/*Funcion que calcula el tiempo de llegada desde el planeta origen al planeta destino */
+/*Funcion que calcula el tiempo de llegada desde el planeta origen al planeta destino. La velocidad se fijo en 27012 km/h*/
 function calcularTiempo(tiempoTotal) {
-    let tiempoHoras = tiempoTotal/0.027012;
-    let tiempoDias = tiempoHoras/24;
+    let tiempoHoras = tiempoTotal / 0.027012;
+    let tiempoDias = tiempoHoras / 24;
     return tiempoDias;
-
 }
 
 let pla1 = parseInt(prompt("Elija el planeta: \n 1-Mercurio\n 2-Venus \n 3-Tierra \n 4-Marte \n 5-Jupiter \n 6-Saturno \n 7-Urano \n 8-Neptuno"));
