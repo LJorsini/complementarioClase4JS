@@ -31,6 +31,13 @@ function calcularDistancia(planeta1, planeta2) {
     }
     return distancia;
 }
+/*Funcion que calcula el tiempo de llegada desde el planeta origen al planeta destino */
+function calcularTiempo(tiempoTotal) {
+    let tiempoHoras = tiempoTotal/0.027012;
+    let tiempoDias = tiempoHoras/24;
+    return tiempoDias;
+
+}
 
 let pla1 = parseInt(prompt("Elija el planeta: \n 1-Mercurio\n 2-Venus \n 3-Tierra \n 4-Marte \n 5-Jupiter \n 6-Saturno \n 7-Urano \n 8-Neptuno"));
 let pla2 = parseInt(prompt("Elija el planeta: \n 1-Mercurio\n 2-Venus \n 3-Tierra \n 4-Marte \n 5-Jupiter \n 6-Saturno \n 7-Urano \n 8-Neptuno"));
@@ -39,9 +46,10 @@ let planeta1 = elegirPlaneta(pla1);
 let planeta2 = elegirPlaneta(pla2);
 
 let distanciaTotal = calcularDistancia(planeta1, planeta2);
+let tiempoLlegada = calcularTiempo(distanciaTotal);
 
 if (planeta1 == 1 || planeta2 == 1) {
     alert("Uno de los dos planetas no existe ")
 } else {
-    alert(" La distancia entre los dos planetas es  " + distanciaTotal + " Millones de Kilometros");
+    alert("La distancia entre los dos planetas es " + distanciaTotal + " Millones de Kilometros.\nEl tiempo de viaje a una velocidad de 27012 Km/h es de: " + tiempoLlegada + " dias. ");
 }
